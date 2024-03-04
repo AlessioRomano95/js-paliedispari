@@ -46,3 +46,24 @@ function isEven(num1, num2){
     }
     return resultNumber
 }
+
+// 6
+button.addEventListener('click', function(){
+  const resultCpu = getResultCpu();
+  console.log(resultCpu, ' resultCpu')
+  const userNumber = getUserNumber()
+  console.log(userNumber, ' userNumber')
+  const resultNumber = isEven(resultCpu, userNumber)
+  console.log(resultNumber, 'resultNumber')
+  const paDi = pR.value
+  console.log(paDi, ' PaDi')
+  // 7
+  let message = 'HO VINTO IO'
+  let win = false
+  if (resultNumber === paDi){
+      message = 'HAI VINTO TU'
+      win = true
+  }
+  // 8
+  victory.innerText = `${message} ${resultNumber}`
+})
